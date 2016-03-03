@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCF0B7A9-805E-42E1-8AF2-2BF71BE1A30A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{AF4A7BB1-A06C-44BC-8EE6-D2A04156B2B6}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TechnicalExerciseEPAM</RootNamespace>
-    <AssemblyName>TechnicalExerciseEPAM</AssemblyName>
+    <RootNamespace>SourceFromParameters</RootNamespace>
+    <AssemblyName>SourceFromParameters</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -59,37 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandLineArguments.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="SourceFromParametersFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TextWordCalculator.cs" />
-    <Compile Include="UnityContainerSetup.cs" />
+    <Compile Include="SourceFromParametersPlugin.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EmptyContext\EmptyContext.csproj">
-      <Project>{f0450c72-904b-4954-b8f5-c79471dea25d}</Project>
-      <Name>EmptyContext</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\OutputToConsole\OutputToConsole.csproj">
-      <Project>{ca5bdaf3-1119-4551-8291-02521ceedcfa}</Project>
-      <Name>OutputToConsole</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SharedInterfaces\SharedInterfaces.csproj">
       <Project>{411a2d4e-3130-4aa6-bf5e-4465d80e2416}</Project>
       <Name>SharedInterfaces</Name>
     </ProjectReference>
-    <ProjectReference Include="..\SourceFromParameters\SourceFromParameters.csproj">
-      <Project>{af4a7bb1-a06c-44bc-8ee6-d2a04156b2b6}</Project>
-      <Name>SourceFromParameters</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TextAnalyzeProcesses\TextAnalyzeProcesses.csproj">
-      <Project>{88dec891-81c9-43aa-a1eb-e494c1fb2549}</Project>
-      <Name>TextAnalyzeProcesses</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
