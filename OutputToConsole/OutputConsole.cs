@@ -19,7 +19,6 @@ namespace OutputToConsole
             {
                 Console.WriteLine(item.Key + " - " + item.Value);
             }
-            Console.ReadLine();
         }
     }
 }

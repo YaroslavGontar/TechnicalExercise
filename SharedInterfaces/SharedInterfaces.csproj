@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IContextFactory.cs" />
+    <Compile Include="ILogger.cs" />
     <Compile Include="IOutputPluginFactory.cs" />
     <Compile Include="IParameters.cs" />
     <Compile Include="IPlugin.cs" />
